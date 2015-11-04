@@ -1,5 +1,5 @@
 <?php
-
+ 
 class Pengo_Class01_Model_LatestProducts extends Mage_Core_Model_Abstract
 {
     const COLLECTION_SIZE = 5;
