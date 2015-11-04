@@ -1,4 +1,4 @@
-<?php   
+<?php    
 class Pengo_Class01_Block_Index extends Mage_Core_Block_Template
 {
 
