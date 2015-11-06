@@ -40,6 +40,9 @@
         $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
     }
 ?>
+
+<?php $content = $this->getLayout()->getBlock('parent'); ?>
+
 <div class="page-title category-title">
     <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
         <a href="<?php echo $this->getRssLink() ?>" class="link-rss"><?php echo $this->__('Subscribe to RSS Feed') ?></a>
@@ -59,6 +62,8 @@
     </div>
     <?php endif; ?>
 
+<?php echo $content->toHtml(); ?>
+
 <?php if($this->isContentMode()): ?>
     <?php echo $this->getCmsBlockHtml() ?>
 
@@ -66,6 +71,10 @@
     <?php echo $this->getCmsBlockHtml() ?>
     <?php echo $this->getProductListHtml() ?>
 
+
 <?php else: ?>
     <?php echo $this->getProductListHtml() ?>
 <?php endif; ?>
+
+
+<?php $content = $this->getLayout()->getBlock('parent'); ?>
