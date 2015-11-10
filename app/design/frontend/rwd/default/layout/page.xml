@@ -239,4 +239,25 @@
             <action method="setLayoutCode"><name>three_columns</name></action>
         </reference>
     </page_three_columns>
+
+    <!-- ADD BANNER TO RIGHT -->
+    <catalog_category_view>
+        <reference name="right">
+            <block type="core/template" name="child2" template="page/right.phtml" />
+        </reference>
+    </catalog_category_view>
+
+    <!-- ADD BANNER TO LEFT -->
+    <catalog_category_view>
+        <reference name="left">
+            <block type="core/template" name="child1" template="page/left.phtml" />
+        </reference>
+    </catalog_category_view>
+
+    <!-- ADD BANNER TO CONTENT -->
+    <catalog_category_view>
+        <reference name="content">
+            <block type="core/template" name="parent" template="page/content.phtml" />
+        </reference>
+    </catalog_category_view>
 </layout>

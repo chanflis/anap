@@ -1,0 +1,13 @@
+<!-- Start Slider la -->
+<?php $categories = $this->getAllCategories() ?>
+<div>
+    <div class="slideshow-container">
+        <ul class="slideshow">
+            <?php foreach($categories as $category ):?>
+                <li><a href="<?php echo $category->getUrl() ?>"><img src="<?php echo $category->getImageUrl() ?>" alt="" /></a></li>
+            <?php endforeach;?>
+        </ul>
+    </div>
+    <div class="slideshow-pager">&nbsp;</div>
+    <span class="slideshow-prev" style="height: 655px">&nbsp;</span><span class="slideshow-next" style="height: 655px">&nbsp;</span>
+</div>
