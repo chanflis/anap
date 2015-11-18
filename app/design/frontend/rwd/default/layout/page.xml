@@ -259,5 +259,8 @@
         <reference name="content">
             <block type="core/template" name="parent" template="page/content.phtml" />
         </reference>
+        <reference name="product_list">
+            <block type="core/template" after="product_list" name="parent" template="page/content.phtml" />
+        </reference>
     </catalog_category_view>
 </layout>
