@@ -5,7 +5,7 @@
     </reference>
     <reference name="customer_account_navigation">
 
-      <block type="kokatu/users_account_picture" name="kokatu_users_account_picture" template="kokatu/users/account/picture.phtml"/>
+      <block type="class06/customer_account_image" name="class06_customer_image" template="class06/customer/account/image.phtml"/>
 
       <action method="addLink" translate="label" module="class06" >
         <name>extra_info</name>

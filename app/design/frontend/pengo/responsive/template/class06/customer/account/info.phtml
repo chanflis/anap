@@ -1,11 +1,11 @@
 <?php $_customer = $this->getCustomer() ?>
 <div>
-    <form  enctype="multipart/form-data" id="customer_extra_info" method="POST" action="<?php echo $this->getSubmitUrl() ?>">
+    <form  id="customer_extra_info" method="POST" action="<?php echo $this->getSubmitUrl() ?>">
 
         <ul>
             <li>
                 <label for="profile_image">Image</label>
-                <input type="file" name="profile_image" id="profile_image">
+                <input type="text" name="profile_image" id="profile_image" class="required-entry" value="<?php echo $_customer->getProfileImage() ?>">
             </li>
             <li>
                 <label for="rfc">RFC</label>

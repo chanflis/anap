@@ -15,11 +15,7 @@ class Pengo_Class06_InfoController extends Mage_Core_Controller_Front_Action{
             $customerModel = Mage::getSingleton('customer/session')->getCustomer();
 
             $customerModel->setRfc($data['rfc']);
-
-            if(isset($_FILES['profile_image']) &&  ( file_exists($_FILES['profile_image']['tmp_name'])))
-            {
-
-            }
+            $customerModel->setProfileImage($data['profile_image']);
 
             try{
                 $customerModel->save();
