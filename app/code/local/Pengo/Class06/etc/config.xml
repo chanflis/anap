@@ -6,6 +6,16 @@
         </Pengo_Class06>
     </modules>
     <global>
+        <blocks>
+            <class06>
+                <class>Pengo_Class06_Block</class>
+            </class06>
+            <adminhtml>
+                <rewrite>
+                    <customer_grid>Pengo_Class06_Block_Customer_Grid</customer_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
         <helpers>
             <class06>
                 <class>Pengo_Class06_Helper</class>

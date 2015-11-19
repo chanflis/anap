@@ -33,4 +33,16 @@ class Pengo_Class06_Model_Source_Customer_Interests extends Mage_Eav_Model_Entit
  
         return $this->_options;
     }
+
+    public function toOptionArray()
+    {
+        $options = $this->getAllOptions();
+        $optionsArray = array();
+
+        foreach($options as $option){
+            $optionsArray[] = $option['label'];
+        }
+
+        return $optionsArray;
+    }
 }
