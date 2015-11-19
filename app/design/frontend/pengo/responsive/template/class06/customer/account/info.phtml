@@ -1,0 +1,23 @@
+<?php $_customer = $this->getCustomer() ?>
+<div>
+    <form  enctype="multipart/form-data" id="customer_extra_info" method="POST" action="<?php echo $this->getSubmitUrl() ?>">
+
+        <ul>
+            <li>
+                <label for="profile_image">Image</label>
+                <input type="file" name="profile_image" id="profile_image">
+            </li>
+            <li>
+                <label for="rfc">RFC</label>
+                <input type="text" name="rfc" id="rfc" class="validate-number required-entry" value="<?php echo $_customer->getRfc() ?>">
+            </li>
+            <li>
+                <button type="submit">Guardar</button>
+            </li>
+        </ul>
+    </form>
+</div>
+
+<script type="text/javascript">
+     validateExtraInfo = new VarienForm('customer_extra_info', true);
+</script>

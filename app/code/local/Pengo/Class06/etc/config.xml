@@ -5,6 +5,24 @@
             <version>0.1.1</version>
         </Pengo_Class06>
     </modules>
+    <frontend>
+        <routers>
+            <class06>
+                <use>standard</use>
+                <args>
+                    <module>Pengo_Class06</module>
+                    <frontName>class06</frontName>
+                </args>
+            </class06>
+        </routers>
+        <layout>
+            <updates>
+                <class01>
+                    <file>class06.xml</file>
+                </class01>
+            </updates>
+        </layout>
+    </frontend>
     <global>
         <blocks>
             <class06>

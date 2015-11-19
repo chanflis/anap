@@ -3,17 +3,17 @@ $installer = $this;
 $installer->startSetup();
 
 $installer->addAttribute("customer", "rfc", array(
-    "type" => "varchar",
-    "backend" => "",
-    "label" => "RFC",
-    "input" => "text",
-    "source" => "",
-    "visible" => true,
-    "required" => false,
-    "default" => "",
+    "type"     => "varchar",
+    "backend"  => "",
+    "label"    => "RFC",
+    "input"    => "text",
+    "source"   => "",
+    "visible"  => true,
+    "required" => true,
+    "default"  => "",
     "frontend" => "",
-    "unique" => false,
-    "note" => ""
+    "unique"   => false,
+    "note"     => ""
 ));
 
 $attribute = Mage::getSingleton("eav/config")->getAttribute("customer", "rfc");
@@ -22,7 +22,7 @@ $attribute = Mage::getSingleton("eav/config")->getAttribute("customer", "rfc");
 $used_in_forms = array();
 
 $used_in_forms[] = "adminhtml_customer";
-//$used_in_forms[]="checkout_register";
+$used_in_forms[] ="checkout_register";
 $used_in_forms[] = "customer_account_create";
 $used_in_forms[] = "customer_account_edit";
 $attribute->setData("used_in_forms", $used_in_forms)

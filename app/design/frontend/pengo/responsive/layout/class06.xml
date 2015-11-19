@@ -1,0 +1,31 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">
+  <customer_account>
+    <reference name="head">
+    </reference>
+    <reference name="customer_account_navigation">
+
+      <block type="kokatu/users_account_picture" name="kokatu_users_account_picture" template="kokatu/users/account/picture.phtml"/>
+
+      <action method="addLink" translate="label" module="class06" >
+        <name>extra_info</name>
+        <path>class06/info/</path>
+        <label>Información Extra</label>
+      </action>
+    </reference>
+  </customer_account>
+
+  <class06_info_index>
+    <label>Customer My Account Extra info</label>
+    <update handle="customer_account"/>
+    <reference name="root">
+      <action method="setTemplate">
+        <template>page/2columns-left.phtml</template>
+      </action>
+    </reference>
+    <reference name="my.account.wrapper">
+      <block type="class06/customer_account_info" name="class06_customer_info" template="class06/customer/account/info.phtml"/>
+    </reference>
+  </class06_info_index>
+</layout>
+	
