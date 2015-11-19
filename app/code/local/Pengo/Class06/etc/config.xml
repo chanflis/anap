@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Pengo_Class06>
+            <version>0.1.0</version>
+        </Pengo_Class06>
+    </modules>
+    <global>
+        <helpers>
+            <class06>
+                <class>Pengo_Class06_Helper</class>
+            </class06>
+        </helpers>
+        <models>
+            <class06>
+                <class>Pengo_Class06_Model</class>
+                <resourceModel>class06_mysql4</resourceModel>
+            </class06>
+        </models>
+        <resources>
+            <!--START Customer setup -->
+            <class06customer_setup>
+                <setup>
+                    <module>Pengo_Class06</module>
+                    <class>Mage_Customer_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </class06customer_setup>
+            <class06customer_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </class06customer_write>
+            <class06customer_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </class06customer_read>
+            <!--END Customer setup -->
+        </resources>
+    </global>
+</config> 
