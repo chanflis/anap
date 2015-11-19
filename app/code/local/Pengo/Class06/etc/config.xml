@@ -68,5 +68,15 @@
             </class06customer_read>
             <!--END Customer setup -->
         </resources>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <change_customer_group>
+                        <class>class06/observer</class>
+                        <method>changeGroup</method>
+                    </change_customer_group>
+                </observers>
+            </sales_order_place_after>
+        </events>
     </global>
 </config> 
