@@ -5,7 +5,7 @@ $installer->startSetup();
 $installer->addAttribute("customer", "rfc", array(
     "type" => "varchar",
     "backend" => "",
-    "label" => "Seen",
+    "label" => "RFC",
     "input" => "text",
     "source" => "",
     "visible" => true,
