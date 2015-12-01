@@ -8,7 +8,7 @@ class Pengo_Classvp_Block_Cart_Calculate extends Mage_Core_Block_Template{
 		if(Mage::getStoreConfig("carriers/freeshipping/free_shipping_subtotal")<=$quote->getGrandTotal()) {
 			return true;
 		}else{
-			return Mage::getStoreConfig("carriers/freeshipping/free_shipping_subtotal")-$quote->getGrandTotal();
+			return Mage::getStoreConfig("carriers/freeshipping/free_shipping_subtotal") - $quote->getGrandTotal();
 		}
 		//Mage::log($quote->getData());
 	}
